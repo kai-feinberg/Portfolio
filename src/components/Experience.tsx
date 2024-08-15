@@ -1,67 +1,59 @@
-import { LinkPreview } from "./ui/link-preview";
-import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
-import { Mountain } from "lucide-react";
-import { Separator } from "./ui/separator";
+"use client";
+import Image from "next/image";
+import React from "react";
+import { WobbleCard } from "./ui/wobble-card";
 
 export default function Experience() {
-    return (
-        <div>
-            <Card>
-                <CardHeader>
-                    <CardTitle>
-                        <p>Experience</p>
-                    </CardTitle>
-                </CardHeader>
-
-                <CardContent>
-                    <div className="grid grid-cols-1 gap-4">
-                        <Separator className="bg-black" />
-
-                        <div className="flex items-center gap-3 transition-transform duration-300 hover:scale-105 hover:shadow-xl p-4 rounded-lg">
-                            <div className="rounded-md p-2 flex items-center justify-center">
-                                <Mountain className="w-6 h-6 text-card-foreground" />
-                            </div>
-                            <div>
-                                <div className="font-medium">
-                                <LinkPreview url="https://trailmix.cash/">
-                                        TrailMix.cash
-                                    </LinkPreview>                              
-                                </div>
-                                <div className="text-sm text-muted-foreground">Founder</div>
-                            </div>
-                        </div>
-                        <Separator className="bg-black" />
-
-                        <div className="flex items-center gap-3 transition-transform duration-300 hover:scale-105 hover:shadow-xl p-4 rounded-lg">
-                            <div className="rounded-xl p-2 flex items-center justify-center">
-                                <Mountain className="w-7 h-7 text-card-foreground" />
-                            </div>
-                            <div>
-                                <div className="font-medium">
-                                    <LinkPreview url="https://scoutprotocol.xyz/">
-                                        JoinFire.xyz
-                                    </LinkPreview>
-                                </div>
-                                <div className="text-sm text-muted-foreground">Product intern</div>
-                            </div>
-                        </div>
-                        <Separator className="bg-black" />
-                        <div className="flex items-center gap-3 transition-transform duration-300 hover:scale-105 hover:shadow-xl p-4 rounded-lg">
-                            <div className="rounded-md p-2 flex items-center justify-center">
-                                <Mountain className="w-6 h-6 text-card-foreground" />
-                            </div>
-                            <div>
-                                <div className="font-medium">
-
-                                    <LinkPreview url="https://scoutprotocol.xyz/">Scout Protocol</LinkPreview>
-                                </div>
-                                <div className="text-sm text-muted-foreground">Founder</div>
-                            </div>
-                        </div>
-                        <Separator className="bg-black" />
-                    </div>
-                </CardContent>
-            </Card>
+  return (
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full">
+      <WobbleCard
+        containerClassName="col-span-1 lg:col-span-2 h-full bg-pink-800 min-h-[500px] lg:min-h-[300px]"
+        className=""
+      >
+        <div className="max-w-xs">
+          <h2 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
+            Gippity AI powers the entire universe
+          </h2>
+          <p className="mt-4 text-left  text-base/6 text-neutral-200">
+            With over 100,000 mothly active bot users, Gippity AI is the most
+            popular AI platform for developers.
+          </p>
         </div>
-    );
+        <Image
+          src="/~~/public/linear.webp"
+          width={500}
+          height={500}
+          alt="linear demo image"
+          className="absolute -right-4 lg:-right-[40%] grayscale filter -bottom-10 object-contain rounded-2xl"
+        />
+      </WobbleCard>
+      <WobbleCard containerClassName="col-span-1 min-h-[300px]">
+        <h2 className="max-w-80  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
+          No shirt, no shoes, no weapons.
+        </h2>
+        <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
+          If someone yells “stop!”, goes limp, or taps out, the fight is over.
+        </p>
+      </WobbleCard>
+      <WobbleCard containerClassName="col-span-1 lg:col-span-3 bg-blue-900 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]">
+        <div className="max-w-sm">
+          <h2 className="max-w-sm md:max-w-lg  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
+            Signup for blazing-fast cutting-edge state of the art Gippity AI
+            wrapper today!
+          </h2>
+          <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
+            With over 100,000 mothly active bot users, Gippity AI is the most
+            popular AI platform for developers.
+          </p>
+        </div>
+        <Image
+          src="/linear.webp"
+          width={500}
+          height={500}
+          alt="linear demo image"
+          className="absolute -right-10 md:-right-[40%] lg:-right-[20%] -bottom-10 object-contain rounded-2xl"
+        />
+      </WobbleCard>
+    </div>
+  );
 }
