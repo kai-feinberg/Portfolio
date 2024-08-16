@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <div className="flex flex-col ">
       <main className="flex-1">
-        <section className="max-w-[1100px] mx-auto py-16 md:py-24 lg:py-28">
+        <section className="max-w-[1100px] mx-auto py-10 mb-10">
           <div className="container flex items-start justify-center gap-6 px-4 md:px-6">
             <div className="flex justify-end pr-10">
               <img
