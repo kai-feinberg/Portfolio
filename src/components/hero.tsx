@@ -8,10 +8,10 @@ export default function Hero() {
     <div className="flex flex-col ">
       <main className="flex-1">
         <section className="max-w-[1100px] mx-auto py-16 md:py-24 lg:py-28">
-          <div className="container flex items-start justify-start gap-6 px-4 md:px-6">
+          <div className="container flex items-start justify-center gap-6 px-4 md:px-6">
             <div className="flex justify-end pr-10">
               <img
-                src="/placeholder.svg"
+                src="/headshot.webp"
                 width="384"
                 height="480"
                 alt="Hero"
@@ -32,7 +32,7 @@ export default function Hero() {
                     <SiGithub size={32}/>
                   </Button>
                 </a>
-                <a href="https://x.com/kai_rypto25" target="_blank" rel="noopener noreferrer">
+                <a href="https://warpcast.com/kaimeariver" target="_blank" rel="noopener noreferrer">
                   <Button variant="ghost" size="icon">
                     <SiFarcaster size={32} color="#855DCD"/>
                   </Button>
