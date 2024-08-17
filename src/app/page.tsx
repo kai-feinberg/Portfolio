@@ -4,6 +4,7 @@ import TechStack from '@/components/TechStack';
 import Education from '@/components/Education';
 import Hero from '@/components/hero';
 import Experience from '@/components/Experience';
+import Link from 'next/link';
 
 import Nav from '@/components/Nav';
 export default function Home() {
@@ -17,6 +18,8 @@ export default function Home() {
         <TechStack />
         {/* <Education /> */}
         <Experience />
+        <Link className="bg-accent text-accent-foreground p-4 rounded-lg" href="/fire">Contact</Link>
+
       </main >
     </div>
 
