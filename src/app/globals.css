@@ -28,6 +28,11 @@
     --chart-2: 173 58% 39%;
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
+    /* --hard-shadow: 10px 29px 72px 10px rgba(0, 0, 0, 0.2),
+      22px 25px 36px 10px rgba(0, 0, 0, 0.1);
+    --hard-shadow-left: 10px 29px 72px 10px rgba(0, 0, 0, 0.2),
+      -22px 25px 36px 10px rgba(0, 0, 0, 0.1); */
+
     --chart-5: 27 87% 67%;
   }
 

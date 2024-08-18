@@ -20,7 +20,7 @@ export default function Hero() {
             </div>
             <div className="max-w-[50%]">
               <p className="text-2xl font-bold text-muted-foreground">Hey there! I'm Kai.</p>
-              <TextGenerateEffect words="I'm a builder focused on innovative apps" className="text-6xl text-purple-400b leading-none" />
+              <TextGenerateEffect words="I'm a scrappy builder of innovative apps" className="text-6xl text-purple-400b leading-none" />
 
               <p className="max-w-[600px] mt-4 text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 I'm a developer, engineer, and designer passionate about building products and solving problems.

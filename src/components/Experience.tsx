@@ -10,13 +10,13 @@ export default function Experience() {
         <div className="flex flex-col items-center">
             <Badge className="text-3xl m-12 p-4 px-8 w-max">Experience</Badge>
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-[95%]">
+            <div className="grid grid-cols-1 lg:grid-cols-5 gap-4 max-w-7xl mx-auto w-[95%]">
                 <WobbleCard
-                    containerClassName="col-span-1 lg:col-span-2 h-full bg-red-800 min-h-[500px] lg:min-h-[300px]"
+                    containerClassName="col-span-1 lg:col-span-3 h-full bg-red-800 min-h-[500px] lg:min-h-[300px]"
                     className=""
                 >
-                    <p className="text-xl font-semibold absolute bottom-8 right-8 text-white">Intern</p>
-                    <p className="text-xl font-semibold absolute bottom-16 right-8 text-white">2023</p>
+                    <p className="text-xl font-semibold absolute top-8 right-8 text-white">Intern</p>
+                    <p className="text-xl font-semibold absolute top-16 right-8 text-white">2023</p>
                     <div className="max-w-xs">
                         <LinkPreview url="https://x.com/_joinfire" className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
                             🔥 JoinFire
@@ -38,7 +38,7 @@ export default function Experience() {
                         className="absolute -right-4 lg:-right-[40%] grayscale filter -bottom-10 object-contain rounded-2xl"
                     /> */}
                 </WobbleCard>
-                <WobbleCard containerClassName="col-span-1 min-h-[300px] bg-indigo-800">
+                <WobbleCard containerClassName="col-span-2 min-h-[300px] bg-indigo-800">
                     <p className="text-xl font-semibold absolute top-8 right-8 text-white">Founder</p>
                     <p className="text-xl font-semibold absolute top-16 right-8 text-white">2021</p>
                     <h2 className="max-w-80 text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
@@ -53,7 +53,7 @@ export default function Experience() {
                         <Badge className="">NextJs</Badge>
                     </div>
                 </WobbleCard>
-                <WobbleCard containerClassName="col-span-1 lg:col-span-3 bg-blue-700 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]">
+                <WobbleCard containerClassName="col-span-1 lg:col-span-5 bg-blue-700 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]">
                     <div className="max-w-sm">
                         <p className="text-xl font-semibold absolute top-8 right-8 text-white">Founder</p>
                         <p className="text-xl font-semibold absolute top-16 right-8 text-white">2023-2024</p>

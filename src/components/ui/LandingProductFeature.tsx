@@ -17,6 +17,7 @@ export const LandingProductFeature = ({
   titleComponent,
   description,
   descriptionComponent,
+  linkIcons,
   textPosition = 'left',
   imageSrc,
   imageAlt = '',
@@ -37,17 +38,18 @@ export const LandingProductFeature = ({
   titleComponent?: React.ReactNode;
   description?: string | React.ReactNode;
   descriptionComponent?: React.ReactNode;
+  linkIcons?: React.ReactNode;
   textPosition?: 'center' | 'left';
   imageSrc?: string;
   imageAlt?: string;
   imagePosition?: 'left' | 'right' | 'center';
   imagePerspective?:
-    | 'none'
-    | 'left'
-    | 'right'
-    | 'bottom'
-    | 'bottom-lg'
-    | 'paper';
+  | 'none'
+  | 'left'
+  | 'right'
+  | 'bottom'
+  | 'bottom-lg'
+  | 'paper';
   imageShadow?: 'none' | 'soft' | 'hard';
   zoomOnHover?: boolean;
   minHeight?: number;
@@ -59,7 +61,7 @@ export const LandingProductFeature = ({
   return (
     <section
       className={clsx(
-        'w-full flex flex-col justify-center items-center gap-8 py-12 lg:py-16',
+        'w-full flex flex-col justify-center items-center gap-8',
         withBackground && variant === 'primary'
           ? 'bg-primary-100/20 dark:bg-primary-900/10'
           : '',
@@ -95,23 +97,33 @@ export const LandingProductFeature = ({
           )}
         >
           {title ? (
-            <h2 className="text-4xl font-semibold leading-tight">{title}</h2>
+            <h2 className="text-8xl font-semibold leading-tight">{title}</h2>
           ) : (
             titleComponent
           )}
 
-          {description ? (
-            <p className="mt-4 md:text-xl">{description}</p>
-          ) : (
-            descriptionComponent
-          )}
+          <div>
 
-          {children}
+            {description ? (
+              <p className="mt-4 md:text-xl">{description}</p>
+            ) : (
+              descriptionComponent
+            )}
+
+            {linkIcons ? (
+
+              <div className="flex flex-row gap-4">
+                {linkIcons}
+              </div>
+            ) : null}
+
+            {children}
+          </div>
         </div>
 
         {imageSrc ? (
           <>
-            
+
             {imagePosition === 'center' ? (
               <section className="w-full mt-auto pt-4 md:pt-6">
                 <Image
@@ -141,9 +153,9 @@ export const LandingProductFeature = ({
                   imagePerspective === 'right' && 'lg:perspective-right',
                   imagePerspective === 'bottom' && 'lg:perspective-bottom',
                   imagePerspective === 'bottom-lg' &&
-                    'lg:perspective-bottom-lg',
+                  'lg:perspective-bottom-lg',
                   imagePerspective === 'paper' &&
-                    'lg:perspective-paper hover:scale-90',
+                  'lg:perspective-paper hover:scale-90',
                   imagePerspective === 'none' ? 'my-4' : 'my-8',
                 )}
                 alt={imageAlt}
