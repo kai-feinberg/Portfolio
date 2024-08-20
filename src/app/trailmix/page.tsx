@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { SiGithub, SiFarcaster, SiLinkedin, SiX } from "@icons-pack/react-simple-icons";
 import { Globe } from "lucide-react";
 import { LinkPreview } from "@/components/ui/link-preview";
-import Section from "@/components/ui/project-section";
+import Section from "@/components/ui/experience-section";
 
 export default function trailmix() {
     return (
