@@ -102,7 +102,7 @@ const FloatingDockDesktop = ({
       onMouseMove={(e) => mouseX.set(e.pageX)}
       onMouseLeave={() => mouseX.set(Infinity)}
       className={cn(
-        "mx-auto hidden md:flex h-16 gap-4 items-end rounded-2xl bg-gray-200 dark:bg-neutral-900 px-4 pb-3", //CHANGE TO CHANGE BACKGROUND DIV COLOR
+        "mx-auto hidden md:flex h-16 gap-4 items-end rounded-2xl bg-gray-100 dark:bg-neutral-900 px-4 pb-3", //CHANGE TO CHANGE BACKGROUND DIV COLOR
         className
       )}
     >
@@ -173,7 +173,7 @@ function IconContainer({
         style={{ width, height }}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
-        className="aspect-square rounded-full bg-white dark:bg-neutral-800 flex items-center justify-center relative" //CHANGE TO CHANGE ICON CIRCLE COLOR
+        className="aspect-square rounded-full bg-gray-300 dark:bg-neutral-800 flex items-center justify-center relative" //CHANGE TO CHANGE ICON CIRCLE COLOR
       >
         <AnimatePresence>
           {hovered && (

@@ -2,9 +2,57 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { SiX, SiGithub, SiLinkedin, SiFarcaster } from "@icons-pack/react-simple-icons"
 import { TextGenerateEffect } from "./ui/text-generate-effect"
+import { SiReact, SiTypescript, SiPython, SiReactquery, SiRust, SiShadcnui, SiSolidity, SiNumpy, SiTailwindcss, SiNextdotjs, SiNodedotjs, SiNodedotjsHex, SiExpo, SiExpoHex } from '@icons-pack/react-simple-icons';
+import { SiReactHex, SiTypescriptHex, SiPythonHex, SiReactqueryHex, SiRustHex, SiShadcnuiHex, SiSolidityHex, SiNumpyHex, SiTailwindcssHex, SiNextdotjsHex } from '@icons-pack/react-simple-icons';
+import { FloatingDock } from './ui/floating-dock';
 import { Badge } from "./ui/badge"
 
 export default function Hero() {
+  const links = [
+    {
+      title: "React",
+      icon: (
+        <SiReact size={32} color="black" />
+      ),
+      href: "",
+    },
+    {
+      title: "TypeScript",
+      icon: (
+        <SiTypescript size={32} color={SiTypescriptHex} />
+      ),
+      href: "",
+    },
+    {
+      title: "Shadcn-ui",
+      icon: (
+        <SiShadcnui size={32} color={SiShadcnuiHex} />
+      ),
+      href: "",
+    },
+
+    {
+      title: "Tailwind",
+      icon: (
+        <SiTailwindcss size={32} color={SiTailwindcssHex} />
+      ),
+      href: "",
+    },
+    {
+      title: "Python",
+      icon: (
+        <SiPython size={32} color={SiPythonHex} />
+      ),
+      href: "",
+    },
+    {
+      title: "Solidity",
+      icon: (
+        <SiSolidity size={32} color={SiSolidityHex} />
+      ),
+      href: "",
+    },
+  ];
   return (
     <div className="flex flex-col ">
       <main className="flex-1">
@@ -19,7 +67,28 @@ export default function Hero() {
                   alt="Hero"
                   className="overflow-hidden rounded-xl object-cover max-w-[384px] h-[29rem]" // Fixed width
                 />
-                <p className="text-lg font-semibold mt-4"> Northwestern 25'</p>
+                <div className='flex flex-row gap-4 mt-10'>
+                  <a href="https://github.com/kai-feinberg?tab=repositories" target="_blank" rel="noopener noreferrer">
+                    <Button variant="ghost" size="icon">
+                      <SiGithub size={32} />
+                    </Button>
+                  </a>
+                  <a href="https://warpcast.com/kaimeariver" target="_blank" rel="noopener noreferrer">
+                    <Button variant="ghost" size="icon">
+                      <SiFarcaster size={32} color="#855DCD" />
+                    </Button>
+                  </a>
+                  <a href="https://www.linkedin.com/in/kai-feinberg/" target="_blank" rel="noopener noreferrer">
+                    <Button variant="ghost" size="icon">
+                      <SiLinkedin size={32} color="#0A66C2" />
+                    </Button>
+                  </a>
+                  <a href="https://x.com/kai_rypto25" target="_blank" rel="noopener noreferrer">
+                    <Button variant="ghost" size="icon">
+                      <SiX size={32} />
+                    </Button>
+                  </a>
+                </div>
               </div>
             </div>
             <div className="max-w-[50%]">
@@ -32,27 +101,9 @@ export default function Hero() {
 
               <Badge className="text-md mt-4">🥇  $7k hackathon winnings</Badge>
 
-              <div className='flex flex-row gap-4 mt-10'>
-                <a href="https://github.com/kai-feinberg?tab=repositories" target="_blank" rel="noopener noreferrer">
-                  <Button variant="ghost" size="icon">
-                    <SiGithub size={32} />
-                  </Button>
-                </a>
-                <a href="https://warpcast.com/kaimeariver" target="_blank" rel="noopener noreferrer">
-                  <Button variant="ghost" size="icon">
-                    <SiFarcaster size={32} color="#855DCD" />
-                  </Button>
-                </a>
-                <a href="https://www.linkedin.com/in/kai-feinberg/" target="_blank" rel="noopener noreferrer">
-                  <Button variant="ghost" size="icon">
-                    <SiLinkedin size={32} color="#0A66C2" />
-                  </Button>
-                </a>
-                <a href="https://x.com/kai_rypto25" target="_blank" rel="noopener noreferrer">
-                  <Button variant="ghost" size="icon">
-                    <SiX size={32} />
-                  </Button>
-                </a>
+              <p className="text-xl text-muted-foreground">My tech stack</p>
+              <div className="mt-4 w-full flex">
+                <FloatingDock items={links} />
               </div>
             </div>
 

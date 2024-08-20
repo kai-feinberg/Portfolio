@@ -16,5 +16,6 @@
     "ui": "@/components/ui",
     "examples": "@/components/examples",
     "blocks": "@/components/blocks"
+    
   }
 }
