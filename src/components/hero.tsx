@@ -3,11 +3,14 @@ import { Button } from "@/components/ui/button"
 import { SiX, SiGithub, SiLinkedin, SiFarcaster } from "@icons-pack/react-simple-icons"
 import { TextGenerateEffect } from "./ui/text-generate-effect"
 import { SiReact, SiTypescript, SiPython, SiReactquery, SiRust, SiShadcnui, SiSolidity, SiNumpy, SiTailwindcss, SiNextdotjs, SiNodedotjs, SiNodedotjsHex, SiExpo, SiExpoHex } from '@icons-pack/react-simple-icons';
-import { SiReactHex, SiTypescriptHex, SiPythonHex, SiReactqueryHex, SiRustHex, SiShadcnuiHex, SiSolidityHex, SiNumpyHex, SiTailwindcssHex, SiNextdotjsHex } from '@icons-pack/react-simple-icons';
+import { SiReactHex, SiTypescriptHex, SiPythonHex, SiReactqueryHex, SiRustHex, SiShadcnuiHex, SiSolidityHex, SiNumpyHex, SiTailwindcssHex, SiNextdotjsHex, SiGmail, SiGmailHex } from '@icons-pack/react-simple-icons';
 import { FloatingDock } from './ui/floating-dock';
 import { Badge } from "./ui/badge"
+import { Mail } from "lucide-react";
+import React from "react";
 
 export default function Hero() {
+  const [showMessage, setShowMessage] = React.useState(false);
   const links = [
     {
       title: "React",
@@ -24,9 +27,10 @@ export default function Hero() {
       href: "",
     },
     {
-      title: "Shadcn-ui",
+      title: "Next.js",
       icon: (
-        <SiShadcnui size={32} color={SiShadcnuiHex} />
+        <SiNextdotjs size={32} color={SiNextdotjsHex} />
+
       ),
       href: "",
     },
@@ -39,9 +43,9 @@ export default function Hero() {
       href: "",
     },
     {
-      title: "Python",
+      title: "Node.js",
       icon: (
-        <SiPython size={32} color={SiPythonHex} />
+        <SiNodedotjs size={32} color={SiNodedotjsHex} />
       ),
       href: "",
     },
@@ -53,6 +57,16 @@ export default function Hero() {
       href: "",
     },
   ];
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText("kaiwfeinberg@gmail.com").then(() => {
+      setShowMessage(true);
+      setTimeout(() => {
+        setShowMessage(false);
+      }, 2500);
+    });
+  };
+
   return (
     <div className="flex flex-col ">
       <main className="flex-1">
@@ -88,6 +102,20 @@ export default function Hero() {
                       <SiX size={32} />
                     </Button>
                   </a>
+                  <div className="relative">
+                    {showMessage && (
+                      <div className="ease-in duration-500 absolute bg-white text-black rounded -top-8 mt-20 p-4">
+                         🎉 Copied kaiwfeinberg@gmail.com to clipboard!
+                      </div>
+                    )}
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      onClick={handleCopy}
+                    >
+                      <Mail size={32} color="#EA4335" />
+                    </Button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -101,12 +129,32 @@ export default function Hero() {
 
               <Badge className="text-md mt-4">🥇  $7k hackathon winnings</Badge>
 
-              <p className="text-xl text-muted-foreground">My tech stack</p>
-              <div className="mt-4 w-full flex">
-                <FloatingDock items={links} />
+
+              <div className="mt-8 w-full">
+                <div className="flex flex-row items-center">
+                  <h2 className="text-2xl font-semibold mr-8 dark:text-white flex-shrink-0">My tech <br /> stack...</h2>
+                  <div className="">
+                    <FloatingDock items={links} />
+                  </div>
+                </div>
+                <div className="flex justify-end mt-2 mr-8">
+                  <div className="relative group">
+                    <p className="cursor-pointer">with experience in...</p>
+                    <div className="absolute right-0 hidden group-hover:block bg-white shadow-lg rounded-lg p-4">
+                      <div className="flex flex-row justify-center gap-4">
+                        <SiReactquery size={32} color={SiReactqueryHex} />
+                        <SiPython size={32} color={SiPythonHex} />
+                        <SiShadcnui size={32} color={SiShadcnuiHex} />
+                        <SiExpo size={32} color={SiExpoHex} />
+                        <SiRust size={32} color={SiRustHex} />
+                        <SiNumpy size={32} color={SiNumpyHex} />
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-
           </div>
 
         </section>

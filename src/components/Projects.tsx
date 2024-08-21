@@ -4,6 +4,8 @@ import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { useOutsideClick } from "@/app/hooks/use-outside-click";
+import { SiExpo, SiFigma, SiOpenai, SiReact } from "@icons-pack/react-simple-icons";
+import { icons } from "lucide-react";
 
 export function Projects({ orientation = "horizontal" }) {
     const [active, setActive] = useState<(typeof cards)[number] | boolean | null>(
@@ -35,7 +37,9 @@ export function Projects({ orientation = "horizontal" }) {
 
     return (
         <>
-            <Badge className="text-3xl m-12 p-4 px-8 w-max">Projects</Badge>
+            <div className="flex justify-center">
+                <Badge className="text-3xl m-12 p-4 px-8 w-max">Projects</Badge>
+            </div>
 
             <AnimatePresence>
                 {active && typeof active === "object" && (
@@ -63,11 +67,9 @@ export function Projects({ orientation = "horizontal" }) {
                         <motion.div
                             layoutId={`card-${active.title}-${id}`}
                             ref={ref}
-                            className={`w-full ${
-                                isVertical ? "max-w-[400px]" : "max-w-[800px]"
-                            } h-full md:h-fit md:max-h-[90%] flex ${
-                                isVertical ? "flex-col" : "flex-row"
-                            } bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden`}
+                            className={`w-full ${isVertical ? "max-w-[400px]" : "max-w-[800px]"
+                                } h-full md:h-fit md:max-h-[90%] flex ${isVertical ? "flex-col" : "flex-row"
+                                } bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden`}
                         >
                             <motion.div
                                 layoutId={`image-${active.title}-${id}`}
@@ -79,13 +81,11 @@ export function Projects({ orientation = "horizontal" }) {
                                     height={isVertical ? 500 : 400}
                                     src={active.src}
                                     alt={active.title}
-                                    className={`${
-                                        isVertical
-                                            ? "w-full h-[500px] max-h-[500px]"
-                                            : "w-full h-full"
-                                    } sm:rounded-tl-lg ${
-                                        isVertical ? "sm:rounded-tr-lg" : "sm:rounded-bl-lg"
-                                    } object-cover object-center`}
+                                    className={`${isVertical
+                                        ? "w-full h-[500px] max-h-[500px]"
+                                        : "w-full h-full"
+                                        } sm:rounded-tl-lg ${isVertical ? "sm:rounded-tr-lg" : "sm:rounded-bl-lg"
+                                        } object-cover object-center`}
                                 />
                             </motion.div>
 
@@ -94,7 +94,7 @@ export function Projects({ orientation = "horizontal" }) {
                                     <div>
                                         <motion.h3
                                             layoutId={`title-${active.title}-${id}`}
-                                            className="font-medium text-neutral-700 dark:text-neutral-200 text-base"
+                                            className="font-medium text-neutral-700 dark:text-neutral-200 text-3xl mb-2"
                                         >
                                             {active.title}
                                         </motion.h3>
@@ -105,18 +105,6 @@ export function Projects({ orientation = "horizontal" }) {
                                             {active.description}
                                         </motion.p>
                                     </div>
-
-                                    <motion.a
-                                        layout
-                                        initial={{ opacity: 0 }}
-                                        animate={{ opacity: 1 }}
-                                        exit={{ opacity: 0 }}
-                                        href={active.ctaLink}
-                                        target="_blank"
-                                        className="px-4 py-3 text-sm rounded-full font-bold bg-green-500 text-white"
-                                    >
-                                        {active.ctaText}
-                                    </motion.a>
                                 </div>
                                 <div className="pt-4 relative px-4">
                                     <motion.div
@@ -124,11 +112,13 @@ export function Projects({ orientation = "horizontal" }) {
                                         initial={{ opacity: 0 }}
                                         animate={{ opacity: 1 }}
                                         exit={{ opacity: 0 }}
-                                        className="text-neutral-600 text-xs md:text-sm lg:text-base h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto dark:text-neutral-400 [mask:linear-gradient(to_bottom,white,white,transparent)] [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
+                                        className="text-neutral-600 text-xs md:text-sm lg:text-base h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto dark:text-neutral-400 "
                                     >
-                                        {typeof active.content === "function"
-                                            ? active.content()
-                                            : active.content}
+                                        <div>
+                                            {typeof active.content === "function"
+                                                ? active.content()
+                                                : active.content}
+                                        </div>
                                     </motion.div>
                                 </div>
                             </div>
@@ -136,17 +126,16 @@ export function Projects({ orientation = "horizontal" }) {
                     </div>
                 ) : null}
             </AnimatePresence>
-            <ul className="max-w-5xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-start gap-8">
+            <ul className="max-w-5xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 items-start gap-8">
                 {cards.map((card, index) => (
                     <motion.div
                         layoutId={`card-${card.title}-${id}`}
                         key={card.title}
                         onClick={() => setActive(card)}
-                        className={`flex ${
-                            isVertical ? "flex-col" : "flex-row"
-                        } bg-neutral-50 hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-xl cursor-pointer overflow-hidden`}
+                        className={`flex ${isVertical ? "flex-col" : "flex-row"
+                            } bg-neutral-50 dark:bg-neutral-800 hover:bg-neutral-100 dark:hover:bg-neutral-900 rounded-xl cursor-pointer overflow-hidden`}
                     >
-                        <motion.div 
+                        <motion.div
                             layoutId={`image-${card.title}-${id}`}
                             className={isVertical ? "w-full" : "w-1/2"}
                         >
@@ -155,24 +144,30 @@ export function Projects({ orientation = "horizontal" }) {
                                 height={isVertical ? 500 : 200}
                                 src={card.src}
                                 alt={card.title}
-                                className={`${
-                                    isVertical ? "h-[400px]" : "h-full"
-                                } w-full object-cover object-center`}
+                                className={`${isVertical ? "h-[400px]" : "h-full"
+                                    } w-full object-cover object-center`}
                             />
                         </motion.div>
                         <div className={`flex flex-col justify-center ${isVertical ? "p-4" : "p-4 w-1/2"}`}>
                             <motion.h3
                                 layoutId={`title-${card.title}-${id}`}
-                                className="font-medium text-neutral-800 dark:text-neutral-200 text-base"
+                                className="font-semibold text-neutral-800 dark:text-neutral-200 text-2xl"
                             >
                                 {card.title}
                             </motion.h3>
-                            <motion.p
+                            <motion.div
                                 layoutId={`description-${card.description}-${id}`}
                                 className="text-neutral-600 dark:text-neutral-400 text-sm mt-2"
                             >
-                                {card.description}
-                            </motion.p>
+                                <div className="flex justify-start flex-col">
+                                    <p>{card.description}</p>
+                                    <div className="flex flex-row gap-4">
+                                        {card.icons && card.icons.map((icon, index) => (
+                                            <icon.component key={index} className="h-6 w-6 mt-8" />
+                                        ))}
+                                    </div>
+                                </div>
+                            </motion.div>
                         </div>
                     </motion.div>
                 ))}
@@ -181,76 +176,68 @@ export function Projects({ orientation = "horizontal" }) {
     );
 }
 
-
-
 const cards = [
     {
-        description: "Lana Del Rey",
-        title: "Summertime Sadness",
-        src: "",
-        ctaText: "Visit",
-        ctaLink: "https://ui.aceternity.com/templates",
+        title: "Can I Park Here?",
+        description: "A React Native app to decipher parking signs.",
+        src: "/tt-fuse-company.png",
+        icons: [{ component: SiExpo }, { component: SiReact }, { component: SiOpenai }],
         content: () => {
             return (
-                <p>
-                    Lana Del Rey, an iconic American singer-songwriter, is celebrated for
-                    her melancholic and cinematic music style. Born Elizabeth Woolridge
-                    Grant in New York City, she has captivated audiences worldwide with
-                    her haunting voice and introspective lyrics. <br /> <br /> Her songs
-                    often explore themes of tragic romance, glamour, and melancholia,
-                    drawing inspiration from both contemporary and vintage pop culture.
-                    With a career that has seen numerous critically acclaimed albums, Lana
-                    Del Rey has established herself as a unique and influential figure in
-                    the music industry, earning a dedicated fan base and numerous
-                    accolades.
-                </p>
-            );
-        },
-    },
-    {
-        description: "Babbu Maan",
-        title: "Mitran Di Chhatri",
-        src: "/tt-fuse-creator.png",
-        ctaText: "Visit",
-        ctaLink: "https://ui.aceternity.com/templates",
-        content: () => {
-            return (
-                <p>
-                    Babu Maan, a legendary Punjabi singer, is renowned for his soulful
-                    voice and profound lyrics that resonate deeply with his audience. Born
-                    in the village of Khant Maanpur in Punjab, India, he has become a
-                    cultural icon in the Punjabi music industry. <br /> <br /> His songs
-                    often reflect the struggles and triumphs of everyday life, capturing
-                    the essence of Punjabi culture and traditions. With a career spanning
-                    over two decades, Babu Maan has released numerous hit albums and
-                    singles that have garnered him a massive fan following both in India
-                    and abroad.
-                </p>
-            );
-        },
-    },
+                <div>
+                    <p>
+                        Frustrated by Evanston’s abysmal parking signs, I made a phone app to tell you if you can park somewhere.
+                        Just snap a photo of the sign and get a clear Yes/No answer with a short explanation.
+                        Extra useful for those with vision or cognitive impairments and for whom English is their second language.
+                    </p>
+                    <br />
 
-    {
-        description: "Metallica",
-        title: "For Whom The Bell Tolls",
-        src: "/cc-rendered.png",
-        ctaText: "Visit",
-        ctaLink: "https://ui.aceternity.com/templates",
-        content: () => {
-            return (
-                <p>
-                    Metallica, an iconic American heavy metal band, is renowned for their
-                    powerful sound and intense performances that resonate deeply with
-                    their audience. Formed in Los Angeles, California, they have become a
-                    cultural icon in the heavy metal music industry. <br /> <br /> Their
-                    songs often reflect themes of aggression, social issues, and personal
-                    struggles, capturing the essence of the heavy metal genre. With a
-                    career spanning over four decades, Metallica has released numerous hit
-                    albums and singles that have garnered them a massive fan following
-                    both in the United States and abroad.
-                </p>
+                    <p>
+                        Makes use of OpenAI's gpt-4o-mini model to analyze images taken.
+                    </p>
+                    <br />
+
+                    <p>
+                        Built with Expo, React Native, and OpenAI's API.
+                    </p>
+                </div>
             );
         },
     },
-    
+    {
+        title: "TikTok Fuse",
+        description: "A tinder interface to connect companies and creators.",
+        src: "/tt-fuse-creator.png",
+        icons: [{ component: SiFigma }],
+        content: () => {
+            return (
+                <div>
+                    <p>
+                        In partnership with TikTok, my team was tasked with helping them find a better way to connect companies with creators that fit their brand so they could make ads that better integrated with native content.
+                        Our innovative solution was TikTok Fuse, a tinder-esque interface to aggregate data, examples, and costs so companies and creators could find mutually beneficial partnerships.
+                    </p>
+                    <br />
+                    <p>
+                        Prototype built in Figma.
+                    </p>
+                </div>
+            );
+        },
+    },
+    {
+        title: "Chicken Clip",
+        description: "A bag clip designed for backpacks.",
+        src: "/cc-rendered.png",
+        content: () => {
+            return (
+                <div>
+                    <p>
+                        In this 10 week design sprint, my team identified the need to declutter classroom floors.
+                        Backpacks strewn all across the ground provided a tripping hazard and traditional bag clips were not designed for the weight and form of backpacks.
+                        The chicken clip is a cheap, portable accessory that keeps backpacks off the floor while keeping contents accessible.
+                    </p>
+                </div>
+            );
+        },
+    },
 ];
