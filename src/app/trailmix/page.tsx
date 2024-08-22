@@ -79,7 +79,8 @@ export default function trailmix() {
 
                         *now it costs less than a cent per strategy.
                     `}
-                    imageSrc="/process-image.png" // Replace with actual image
+                    imageSrc="/tm-dash.png" // Replace with actual image
+                    additionalImages={["/tm-cards.png"]}
                     reverse={true}
                 />
 
@@ -90,7 +91,7 @@ export default function trailmix() {
 
                         Maybe the real friends are the libraries we learned along the way…
                     `}
-                    imageSrc="/conclusion-image.png" // Replace with actual image
+                    imageSrc="/tm-lp.png"
                 />
             </div>
         </div>

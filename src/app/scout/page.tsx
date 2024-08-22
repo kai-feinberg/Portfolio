@@ -3,7 +3,7 @@ import React from "react";
 import Nav from "@/components/Nav";
 import { LandingProductFeature } from "@/components/ui/LandingProductFeature";
 import { Button } from "@/components/ui/button";
-import { SiGithub } from "@icons-pack/react-simple-icons";
+import { SiGithub, SiGoogleslides } from "@icons-pack/react-simple-icons";
 import { Globe } from "lucide-react";
 import { LinkPreview } from "@/components/ui/link-preview";
 import {Tweet} from "react-tweet"
@@ -35,6 +35,12 @@ export default function scout() {
                                 <SiGithub size={32} />
                             </Button>
                         </LinkPreview>
+                        <LinkPreview url="https://pitch.com/public/091e52c5-b2a0-478c-8ff3-4b417753f955">
+                            <Button variant="ghost" size="icon">
+                                <SiGoogleslides size={32} />
+                            </Button>
+                        </LinkPreview>
+
                         
                     </div>}
             />
