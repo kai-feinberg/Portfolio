@@ -180,7 +180,7 @@ const cards = [
     {
         title: "Can I Park Here?",
         description: "A React Native app to decipher parking signs.",
-        src: "/tt-fuse-company.png",
+        src: "/ciph.gif",
         icons: [{ component: SiExpo }, { component: SiReact }, { component: SiOpenai }],
         content: () => {
             return (
