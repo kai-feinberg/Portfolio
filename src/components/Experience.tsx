@@ -61,8 +61,8 @@ export default function Experience() {
                                     🔥 JoinFire
                                 </LinkPreview>
                                 <p className="mt-4 text-left  text-base/6 text-neutral-200">
-                                    Product intern at venture backed startup. Worked on the core product and helped with
-                                    the development of the web app.
+                                    Product intern at venture backed startup.
+                                     Worked directly with co-founder to design features and conduct user research.
                                 </p>
                                 <div className="flex flex-wrap gap-2 mt-4">
                                     <Badge className="">Python</Badge>

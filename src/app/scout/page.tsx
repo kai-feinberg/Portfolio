@@ -105,10 +105,6 @@ export default function scout() {
             </div>
 
 
-
-
-
-
         </div>
 
     )
