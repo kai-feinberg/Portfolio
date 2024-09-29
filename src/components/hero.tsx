@@ -11,7 +11,7 @@ import React from "react";
 
 export default function Hero() {
   const [showMessage, setShowMessage] = React.useState(false);
- 
+
 
   const handleCopy = () => {
     navigator.clipboard.writeText("kaiwfeinberg@gmail.com").then(() => {
@@ -36,7 +36,7 @@ export default function Hero() {
                   alt="Hero"
                   className="overflow-hidden rounded-xl object-cover max-w-[384px] h-[29rem]" // Fixed width
                 />
-                <Badge className="text-md absolute top-4 left-4">🥇  $7k hackathon winnings</Badge>
+                <Badge className="text-md absolute top-4 left-4">🥇  $9k hackathon winnings</Badge>
               </div>
             </div>
             <div className="max-w-[50%]">
@@ -49,7 +49,7 @@ export default function Hero() {
 
 
               <div className="mt-8 w-full">
-              <div className='flex flex-row gap-4 mt-4'>
+                <div className='flex flex-row gap-4 mt-4'>
                   <a href="https://github.com/kai-feinberg?tab=repositories" target="_blank" rel="noopener noreferrer">
                     <Button variant="ghost" size="icon">
                       <SiGithub size={32} />
@@ -73,7 +73,7 @@ export default function Hero() {
                   <div className="relative">
                     {showMessage && (
                       <div className="ease-in duration-500 absolute bg-white text-black rounded -top-8 mt-20 p-4">
-                         🎉 Copied kaiwfeinberg@gmail.com to clipboard!
+                        🎉 Copied kaiwfeinberg@gmail.com to clipboard!
                       </div>
                     )}
                     <Button

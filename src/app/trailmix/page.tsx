@@ -90,6 +90,9 @@ export default function trailmix() {
                         When I started, I didn't know how to build TrailMix. But that didn't deter me. Because I'm a builder. I learn by building. By combing through docs, and watching countless tutorials. By trial and error and chatGPT. I do what it takes to bring ideas to life.
 
                         Maybe the real friends are the libraries we learned along the way…
+
+                        Update: TrailMix Loop (ie TrailMix V2) was a winner of the EthOnline 2024 Hackathon. I won $2k in the Chainlink "Connect the World" track. 
+                        more info: https://ethglobal.com/showcase/trailmix-loop-7fkdr
                     `}
                     imageSrc="/tm-lp.png"
                 />
