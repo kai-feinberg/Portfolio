@@ -36,7 +36,7 @@ export default function Hero() {
                   alt="Hero"
                   className="overflow-hidden rounded-xl object-cover max-w-[384px] h-[29rem]" // Fixed width
                 />
-                <Badge className="text-md absolute top-4 left-4">🥇  $9k hackathon winnings</Badge>
+                <Badge className="text-md absolute top-4 left-4">🥇 $9k hackathon winnings</Badge>
               </div>
             </div>
             <div className="max-w-[50%]">
