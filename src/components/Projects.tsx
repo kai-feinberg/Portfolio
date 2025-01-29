@@ -4,7 +4,7 @@ import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { useOutsideClick } from "@/app/hooks/use-outside-click";
-import { SiExpo, SiFigma, SiOpenai, SiReact } from "@icons-pack/react-simple-icons";
+import { SiExpo, SiFigma, SiOpenai, SiReact, SiNextdotjs, SiLangchain, SiStreamlit, SiPython, SiPydantic } from "@icons-pack/react-simple-icons";
 import { icons } from "lucide-react";
 
 export function Projects({ orientation = "horizontal" }) {
@@ -186,7 +186,7 @@ const cards = [
             return (
                 <div>
                     <p>
-                        Frustrated by Evanston’s abysmal parking signs, I made a phone app to tell you if you can park somewhere.
+                        Frustrated by Evanston's abysmal parking signs, I made a phone app to tell you if you can park somewhere.
                         Just snap a photo of the sign and get a clear Yes/No answer with a short explanation.
                         Extra useful for those with vision or cognitive impairments and for whom English is their second language.
                     </p>
@@ -195,7 +195,10 @@ const cards = [
                     <p>
                         Makes use of OpenAI's gpt-4o-mini model to analyze images taken.
                     </p>
+
                     <br />
+                    Repo: <a href="https://github.com/kai-feinberg/can-i-park-here" target="_blank" rel="noopener noreferrer">https://github.com/kai-feinberg/can-i-park-here</a>
+
 
                     <p>
                         Built with Expo, React Native, and OpenAI's API.
@@ -204,8 +207,9 @@ const cards = [
             );
         },
     },
+
     {
-        title: "TikTok Fuse",
+        title: "TikTok Fuse (a TikTok Externship)",
         description: "A tinder interface to connect companies and creators.",
         src: "/tt-fuse-creator.png",
         icons: [{ component: SiFigma }],
@@ -225,6 +229,64 @@ const cards = [
         },
     },
     {
+        title: "Ask Reddit",
+        description: "An AI agent that answers with data from Reddit",
+        src: "/reddit-agent.gif",
+        icons: [{ component: SiStreamlit }, { component: SiPython }, { component: SiPydantic }],
+        content: () => {
+            return (
+                <div>
+                    <p>
+                        With more AI generated content, people have turned to Reddit as the last source of human truth. This agent speeds up your research process by identifying relevant reddit posts and extracting insights from the post and comments. 
+                    </p>
+                    <br />
+                    <p>
+                        Built with Python, Pydantic AI and Streamlit
+
+                    </p>
+                    <br />
+
+                    Repo:
+                    <p className="text-blue-500">
+                        <a href="https://github.com/kai-feinberg/ottomator-hackathon" target="_blank" rel="noopener noreferrer">https://github.com/kai-feinberg/ottomator-hackathon</a>
+                    </p>
+                </div>
+            );
+        }
+    },
+    {
+        title: "Wildchat",
+        description: "A RAG application for all things Northwestern",
+        src: "/wildchat.png",
+        icons: [{ component: SiReact }, { component: SiOpenai }, { component: SiNextdotjs }, { component: SiLangchain }],
+        content: () => {
+            return (
+                <div>
+                    <p>
+                        Wildchat is a chat application designed to direct students towards Northwestern resources. From research opportunities and job boards to email contacts and class planning Wildchat is you one stop shop to find all things Northwestern.
+                    </p>
+                    <br />
+                    <p>
+                        Built with NextJs, Langchain, Supabase, and OpenAI
+                    </p>
+                    <br />
+                    Repo:
+                    <p className="text-blue-500"><a href="https://github.com/kai-feinberg/wildchat" target="_blank" rel="noopener noreferrer">https://github.com/kai-feinberg/wildchat</a></p>
+
+                    <br />
+                    <p>Hackathon project with:</p>
+                    <ul>
+                        <li>- Lydia Tallarini</li>
+                        <li>- Frank Zhang</li>
+                        <li>- Nancy Yang</li>
+                        <li>- Breanna</li>
+                    </ul>
+                </div>
+            );
+        }
+    },
+
+    {
         title: "Chicken Clip",
         description: "A bag clip designed for backpacks.",
         src: "/cc-rendered.png",
@@ -240,4 +302,6 @@ const cards = [
             );
         },
     },
+
+
 ];

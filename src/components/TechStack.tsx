@@ -1,8 +1,9 @@
-import { SiReact, SiTypescript, SiPython, SiReactquery, SiRust, SiShadcnui, SiSolidity, SiNumpy, SiTailwindcss, SiNextdotjs, SiNodedotjs, SiNodedotjsHex, SiExpo, SiExpoHex } from '@icons-pack/react-simple-icons';
+import { SiReact, SiTypescript, SiPython, SiReactquery, SiRust, SiShadcnui, SiSolidity, SiNumpy, SiTailwindcss, SiNextdotjs, SiNodedotjs, SiNodedotjsHex, SiSupabase, SiSupabaseHex, SiExpo, SiExpoHex } from '@icons-pack/react-simple-icons';
 import { SiReactHex, SiTypescriptHex, SiPythonHex, SiReactqueryHex, SiRustHex, SiShadcnuiHex, SiSolidityHex, SiNumpyHex, SiTailwindcssHex, SiNextdotjsHex } from '@icons-pack/react-simple-icons';
 import { FloatingDock } from './ui/floating-dock';
 
 export default function TechStack() {
+  //TODO ADD SUPABASE AND REMOVE NODE
   const links = [
     {
       title: "React",
@@ -28,23 +29,23 @@ export default function TechStack() {
     },
 
     {
+      title: "Supabase",
+      icon: (
+        <SiSupabase size={48} color={SiSupabaseHex} />
+      ),
+      href: "",
+    },
+    {
+      title: "Python",
+      icon: (
+        <SiPython size={48} color={SiPythonHex} />
+      ),
+      href: "",
+    },
+    {
       title: "Tailwind",
       icon: (
         <SiTailwindcss size={48} color={SiTailwindcssHex} />
-      ),
-      href: "",
-    },
-    {
-      title: "Node.js",
-      icon: (
-        <SiNodedotjs size={48} color={SiNodedotjsHex} />
-      ),
-      href: "",
-    },
-    {
-      title: "Solidity",
-      icon: (
-        <SiSolidity size={48} color={SiSolidityHex} />
       ),
       href: "",
     },
