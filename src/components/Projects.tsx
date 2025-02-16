@@ -229,7 +229,7 @@ const cards = [
         },
     },
     {
-        title: "Ask Reddit",
+        title: "Ask Reddit 🏅",
         description: "An AI agent that answers with data from Reddit",
         src: "/reddit-agent.gif",
         icons: [{ component: SiStreamlit }, { component: SiPython }, { component: SiPydantic }],
@@ -238,6 +238,8 @@ const cards = [
                 <div>
                     <p>
                         With more AI generated content, people have turned to Reddit as the last source of human truth. This agent speeds up your research process by identifying relevant reddit posts and extracting insights from the post and comments. 
+
+                        Won 4th place in <a href="https://www.youtube.com/watch?v=BN2ozB7LfvE" className="text-blue-500" target="_blank">Cole Medin's Live Agent Studio Hackathon</a>
                     </p>
                     <br />
                     <p>
