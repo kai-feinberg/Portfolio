@@ -36,7 +36,7 @@ export default function Home() {
       <Nav />
       <main className="flex min-h-screen flex-col items-center justify-between p-12">
         <div id="hero"><Hero/></div>
-        <TechStack />   
+        {/* <TechStack />    */}
         <Work />
         <div id="experience">
           <Experience />

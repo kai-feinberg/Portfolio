@@ -59,7 +59,7 @@ const BentoCard = ({
     <div className="absolute inset-0 z-0">{background}</div>
     
     {/* Gradient overlay for text readability */}
-    <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+    <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
     
     {/* Content layer */}
     <div className="relative z-20 p-4 h-full flex flex-col justify-end">

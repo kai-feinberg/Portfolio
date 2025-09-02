@@ -1,5 +1,5 @@
 import { CalendarIcon, FileTextIcon } from "@radix-ui/react-icons";
-import { BellIcon, Share2Icon } from "lucide-react";
+import { BellIcon, GridIcon, RocketIcon, SearchIcon, Share2Icon } from "lucide-react";
 import { Badge } from "./ui/badge";
 
 import { BentoCard, BentoGrid } from "@/components/ui/bento-grid";
@@ -7,60 +7,60 @@ import { BentoCard, BentoGrid } from "@/components/ui/bento-grid";
 
 const features = [
   {
-    Icon: FileTextIcon,
-    name: "Project Management",
-    description: "Streamlined project workflows and file organization.",
+    Icon: Share2Icon,
+    name: "n8n Workshops",
+    description: "Hosted over 10 hours of live workshops on how to use n8n for your business.",
     href: "#",
     cta: "View Project",
     className: "col-span-3 lg:col-span-1",
     background: (
       <img
-        src="/cc-rendered.png"
-        alt="Project Management"
+        src="/n8n.png"
+        alt="n8n workshop image"
         className="w-full h-full object-cover object-center"
       />
     ),
   },
   {
-    Icon: BellIcon,
-    name: "Real-time Analytics",
-    description: "Get insights and notifications for your applications.",
+    Icon: SearchIcon,
+    name: "Client Oracle",
+    description: "Built a RAG application for freelancers to find clients",
     href: "#",
     cta: "View Project",
     className: "col-span-3 lg:col-span-2",
     background: (
       <img
-        src="/cc-rendered.png"
+        src="/client-oracle.png"
         alt="Real-time Analytics"
         className="w-full h-full object-cover object-center"
       />
     ),
   },
   {
-    Icon: Share2Icon,
-    name: "API Integrations",
-    description: "Seamless integrations with popular third-party services.",
+    Icon: RocketIcon,
+    name: "Exodus AI",
+    description: "A daily email engine complete with AI generated emails from finetuned models, analytics, news source inspiration, and more.",
     href: "#",
     cta: "View Project",
     className: "col-span-3 lg:col-span-2",
     background: (
       <img
-        src="/cc-rendered.png"
+        src="/exodus.png"
         alt="API Integrations"
         className="w-full h-full object-cover object-center"
       />
     ),
   },
   {
-    Icon: CalendarIcon,
-    name: "Task Scheduler",
-    description: "Advanced scheduling and calendar management system.",
+    Icon: GridIcon,
+    name: "Horde",
+    description: "Multi agent system with multiple integrations to speed up everyday tasks",
     className: "col-span-3 lg:col-span-1",
     href: "#",
     cta: "View Project",
     background: (
       <img
-        src="/cc-rendered.png"
+        src="/horde.png"
         alt="Task Scheduler"
         className="w-full h-full object-cover object-center"
       />
@@ -71,7 +71,7 @@ const features = [
 export function Work() {
   return (
     <div className="flex flex-col items-center">
-        <Badge className="text-3xl m-12 p-4 px-8 w-max">Work</Badge>
+        <Badge className="text-3xl m-12 p-4 px-8 w-max">My Work</Badge>
     
         <BentoGrid className="max-w-[1100px]">
         {features.map((feature, idx) => (
