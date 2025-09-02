@@ -44,7 +44,7 @@ export default function Hero() {
               <TextGenerateEffect words="I build cool apps solving real problems" className="text-6xl text-purple-400b leading-none" />
 
               <p className="max-w-[600px] mt-4 text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              I'm a dev who combines design thinking with technical skills to identify needs and build practical solutions.
+              I combine design thinking with coding and AI skills to identify pressing issues and build practical solutions.
               </p>
 
 
@@ -55,21 +55,13 @@ export default function Hero() {
                       <SiGithub size={32} />
                     </Button>
                   </a>
-                  <a href="https://warpcast.com/kaimeariver" target="_blank" rel="noopener noreferrer">
-                    <Button variant="ghost" size="icon">
-                      <SiFarcaster size={32} color="#855DCD" />
-                    </Button>
-                  </a>
+                
                   <a href="https://www.linkedin.com/in/kai-feinberg/" target="_blank" rel="noopener noreferrer">
                     <Button variant="ghost" size="icon">
                       <SiLinkedin size={32} color="#0A66C2" />
                     </Button>
                   </a>
-                  <a href="https://x.com/kai_rypto25" target="_blank" rel="noopener noreferrer">
-                    <Button variant="ghost" size="icon">
-                      <SiX size={32} />
-                    </Button>
-                  </a>
+                 
                   <div className="relative">
                     {showMessage && (
                       <div className="ease-in duration-500 absolute bg-white text-black rounded -top-8 mt-20 p-4">
