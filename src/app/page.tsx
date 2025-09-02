@@ -5,6 +5,7 @@ import Experience from '@/components/Experience';
 import Nav from '@/components/Nav';
 import { Projects } from '@/components/Projects';
 import TechStack from '@/components/TechStack';
+import {Work} from '@/components/Work';
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
@@ -35,7 +36,8 @@ export default function Home() {
       <Nav />
       <main className="flex min-h-screen flex-col items-center justify-between p-12">
         <div id="hero"><Hero/></div>
-        <TechStack />
+        <TechStack />   
+        <Work />
         <div id="experience">
           <Experience />
         </div>
