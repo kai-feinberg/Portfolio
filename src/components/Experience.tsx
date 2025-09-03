@@ -15,9 +15,8 @@ export default function Experience() {
 
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-4 max-w-7xl mx-auto w-[95%]">
                 <div className="col-span-1 lg:col-span-5">
-                    <Link href="/copycoders">
+                    <Link href="#">
 
-                        <FollowerPointerCard title="Click for case study">
                             <WobbleCard containerClassName="bg-green-700 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]">
                                 <div className="max-w-sm">
                                     <p className="text-xl font-semibold absolute top-8 right-8 text-white">Head of AI</p>
@@ -44,7 +43,6 @@ export default function Experience() {
                                     className="absolute -right-10 md:-right-[40%] lg:-right-[20%] -bottom-10 object-contain rounded-2xl"
                                 /> */}
                             </WobbleCard>
-                        </FollowerPointerCard>
                     </Link>
                 </div>
 

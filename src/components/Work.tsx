@@ -10,7 +10,7 @@ const features = [
     Icon: Share2Icon,
     name: "n8n Workshops",
     description: "Hosted over 10 hours of live workshops on how to use n8n for your business.",
-    href: "#",
+    href: "/n8n-workshops",
     cta: "View Project",
     className: "col-span-3 lg:col-span-1",
     background: (
@@ -24,8 +24,8 @@ const features = [
   {
     Icon: SearchIcon,
     name: "Client Oracle",
-    description: "Built a RAG application for freelancers to find clients",
-    href: "#",
+    description: "An Agentic RAG chatbot helping freelancers find clients. Automatic sync with Google Drive indexes the latest strategies.",
+    href: "/client-oracle",
     cta: "View Project",
     className: "col-span-3 lg:col-span-2",
     background: (
@@ -40,7 +40,7 @@ const features = [
     Icon: RocketIcon,
     name: "Exodus AI",
     description: "A daily email engine complete with AI generated emails from finetuned models, analytics, news source inspiration, and more.",
-    href: "#",
+    href: "/exodus-ai",
     cta: "View Project",
     className: "col-span-3 lg:col-span-2",
     background: (
@@ -57,7 +57,7 @@ const features = [
     description: "Multi agent system with multiple integrations to speed up everyday tasks",
     className: "col-span-3 lg:col-span-1",
     href: "#",
-    cta: "View Project",
+    cta: "🚧 Under Construction!",
     background: (
       <img
         src="/horde.png"
@@ -73,7 +73,7 @@ export function Work() {
     <div className="flex flex-col items-center">
         <Badge className="text-3xl m-12 p-4 px-8 w-max">My Work</Badge>
     
-        <BentoGrid className="max-w-[1100px]">
+        <BentoGrid className="max-w-[1150px]">
         {features.map((feature, idx) => (
             <BentoCard key={idx} {...feature} />
         ))}

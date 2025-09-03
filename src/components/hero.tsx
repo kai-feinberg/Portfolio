@@ -50,8 +50,9 @@ export default function Hero() {
               <div className="mt-4 md:mt-6">
                 <div className="text-sm sm:text-base md:text-lg text-muted-foreground">
                   <p className="font-semibold text-xl">🏆 Northwestern University</p>
-                  <p className="text-sm sm:text-base md:text-lg lg:text-lg">MS in Computer Science</p>
-                  <p className="text-sm sm:text-base md:text-lg lg:text-lg">BS in Design Engineering (Cum Laude)</p>
+                  <p className="text-sm sm:text-base md:text-lg lg:text-lg">09/25 - MS in Computer Science </p>
+                  <p className="text-sm sm:text-base md:text-lg lg:text-lg">06/25 - BS in Design Engineering (Cum Laude) </p>
+                  {/* <p className="text-sm sm:text-base md:text-lg lg:text-lg">*Cum Laude</p> */}
                 </div>
               </div>
 
