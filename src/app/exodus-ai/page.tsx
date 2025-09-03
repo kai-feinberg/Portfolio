@@ -2,11 +2,7 @@
 import React from "react";
 import Nav from "@/components/Nav";
 import { LandingProductFeature } from "@/components/ui/LandingProductFeature";
-import { Button } from "@/components/ui/button";
-import { SiGithub, SiOpenai, SiMailchimp } from "@icons-pack/react-simple-icons";
-import { Globe, Mail, BarChart } from "lucide-react";
-import { LinkPreview } from "@/components/ui/link-preview";
-import Section from "@/components/ui/experience-section";
+import MarkdownSection from "@/components/ui/markdown-section";
 
 export default function ExodusAI() {
     return (
@@ -15,201 +11,59 @@ export default function ExodusAI() {
 
             <LandingProductFeature
                 title="Exodus AI"
-                description="A daily email engine complete with AI-generated emails from fine-tuned models, analytics, news source inspiration, and more."
-                imageSrc="/exodus.png"
+                description="A daily email engine that business owners use to create content that resonates with their audience. Unlike other AI systems, Exodus comes to users with personalized suggestions based on news topics, RSS feeds, and YouTube content—enabling automated content creation that drives growth."
+                imageSrc="/exodus/generate-content.png"
                 imagePerspective="left"
                 className="max-w-[75%]"
-                linkIcons={
-                    <div className='flex flex-row gap-4 mt-4'>
-                        <LinkPreview url="https://exodus-ai.com/">
-                            <Button variant="ghost" size="icon">
-                                <Globe size={32} />
-                            </Button>
-                        </LinkPreview>
-                        <LinkPreview url="https://github.com/kai-feinberg/exodus-ai">
-                            <Button variant="ghost" size="icon">
-                                <SiGithub size={32} />
-                            </Button>
-                        </LinkPreview>
-                        <LinkPreview url="https://openai.com/">
-                            <Button variant="ghost" size="icon">
-                                <SiOpenai size={32} />
-                            </Button>
-                        </LinkPreview>
-                    </div>}
+                
             />
 
             <div className="max-w-[75%] min-w-[300px] md:min-w-[1000px] mt-6 flex flex-col items-start p-8">
-                <Section
-                    title="The Email Marketing Challenge"
+                <MarkdownSection
+                    title="Personalized AI Content Engine"
                     content={`
-                        Email marketing remains one of the highest ROI channels for businesses, yet most companies struggle with consistent, engaging content creation. The challenge isn't just writing emails—it's maintaining relevance, personalization, and timing while staying on top of industry trends and news.
+                        Exodus is a daily email engine that business owners can use to create content that resonates with their audience. This includes a personalized recommendation system that pulls from news topics as well as scraping RSS feeds, email newsletters, and content from YouTube.
 
-                        Traditional email marketing tools focus on delivery and analytics but leave content creation largely manual. Marketers spend hours researching topics, writing copy, and trying to maintain brand voice consistency across campaigns.
+                        Users get a customized system prompt as well as a fine-tuned model tailored to their business needs. Unlike other AI systems, Exodus comes to the user with suggestions—users can simply create based off of the recommendations.
 
-                        Exodus AI was born from the vision of automating the entire email content creation process while maintaining high quality and relevance through AI and real-time data integration.
+                        Exodus is also expanding to generate short-form content as well as ads and videos with voice-over capabilities, utilizing advanced context engineering to deliver personalized results.
                     `}
-                    imageSrc="/email-challenge.png"
+                    imageSrc="/exodus/news-ideas.png"
                 />
 
-                <Section
-                    title="AI-Powered Email Engine Architecture"
+                
+                <MarkdownSection
+                    title="Expanding Content Capabilities"
                     content={`
-                        Exodus AI combines fine-tuned language models with real-time data sources to create a comprehensive email automation platform:
+                        Exodus is rapidly expanding beyond email to become a comprehensive content creation platform. The system generates daily email content, short-form social media posts, video content with AI-generated voice-over, and advertisement copy through advanced context engineering.
 
-                        **Fine-Tuned AI Models**
-                        • Custom models trained on high-performing email content
-                        • Brand voice adaptation and consistency
-                        • A/B testing integration for continuous optimization
-                        • Multi-format support (newsletters, promotions, nurture sequences)
-
-                        **Real-Time Intelligence**
-                        • News API integration for trending topics
-                        • Industry-specific content curation
-                        • Social media trend analysis
-                        • Competitor monitoring and insights
-
-                        **Smart Personalization**
-                        • Subscriber behavior analysis
-                        • Dynamic content insertion
-                        • Send time optimization
-                        • Segment-specific messaging
-
-                        The platform generates, schedules, and optimizes email campaigns with minimal human intervention while maintaining brand authenticity.
+                        Using personalized system prompts that understand brand voice, Exodus creates context-aware content aligned with business goals and automatically adapts based on audience segments. The AI monitors trends and proactively brings relevant content ideas to users, populating content calendars with smart timing recommendations for maximum impact across platforms.
                     `}
-                    imageSrc="/ai-engine.png"
+                    imageSrc="/exodus/generate-content.png"
                     reverse={true}
                 />
 
-                <Section
-                    title="Core Features & Capabilities"
+                <MarkdownSection
+                    title="AI-Driven Automation Architecture"
                     content={`
-                        **Intelligent Content Generation**
-                        • Daily email creation based on news and trends
-                        • Subject line optimization with A/B testing
-                        • Multi-format templates (news, tutorials, promotions)
-                        • Brand voice consistency across all content
+                        Exodus leverages sophisticated AI and context engineering to automate valuable content creation work for businesses. The platform uses business-specific model training with customized system prompts for each business context, enabling context-aware content generation that understands business goals across text, image, and video formats.
 
-                        **Advanced Analytics Dashboard**
-                        • Real-time performance metrics
-                        • AI-generated insights and recommendations
-                        • Subscriber engagement analysis
-                        • Revenue attribution tracking
-
-                        **News Source Integration**
-                        • RSS feed monitoring
-                        • Social media trend detection
-                        • Industry publication tracking
-                        • Custom source configuration
-
-                        **Automation & Scheduling**
-                        • Smart send time optimization
-                        • Automated follow-up sequences
-                        • Trigger-based campaigns
-                        • Multi-timezone delivery optimization
-
-                        **Fine-Tuning Interface**
-                        • Model performance monitoring
-                        • Custom training data upload
-                        • A/B testing for AI outputs
-                        • Continuous learning integration
+                        The system parses RSS feeds, analyzes email newsletters, monitors YouTube content, and scores news topics for relevance. Through advanced prompt engineering and personalized recommendation algorithms, Exodus adapts content based on audience segments and automatically optimizes for engagement while providing performance analytics and content strategy recommendations based on data.
                     `}
-                    imageSrc="/exodus-dashboard.png"
+                    imageSrc="/exodus/news-ideas.png"
                 />
 
-                <Section
-                    title="Technical Deep Dive"
+                <MarkdownSection
+                    title="Automating Growth Through AI"
                     content={`
-                        **Machine Learning Pipeline**
-                        • GPT-4 base model fine-tuning on email datasets
-                        • Custom embedding models for content similarity
-                        • Reinforcement learning from engagement metrics
-                        • Natural language processing for trend analysis
+                        Exodus represents a new paradigm in business automation, bringing together AI and business intelligence to automate valuable work that drives growth. The system is specifically designed for small and medium business needs, creating top-of-funnel content that drives awareness and leads through scalable content operations.
 
-                        **Backend Infrastructure**
-                        • Python/FastAPI for ML model serving
-                        • Celery for distributed task processing
-                        • Redis for caching and session management
-                        • PostgreSQL for subscriber and campaign data
-
-                        **Data Processing**
-                        • Real-time news API integration (NewsAPI, Google News)
-                        • Web scraping for industry-specific content
-                        • Social media API monitoring (Twitter, LinkedIn)
-                        • Email performance data analysis
-
-                        **Frontend Dashboard**
-                        • Next.js with TypeScript
-                        • Real-time analytics with Chart.js
-                        • Drag-and-drop email builder
-                        • Mobile-responsive design
-
-                        The system processes thousands of data points daily to generate contextually relevant, engaging email content that drives results.
+                        The platform provides email marketing automation with personalized content, short-form social media generation, video content with AI voice-over capabilities, and advertisement copy creation. Through advanced context engineering and fine-tuned models that understand brand voice, Exodus enables businesses to maintain consistent, high-quality content across multiple channels while focusing on core business operations.
                     `}
-                    imageSrc="/tech-architecture.png"
+                    imageSrc="/exodus/swiped-content.png"
                     reverse={true}
                 />
 
-                <Section
-                    title="Performance & Impact"
-                    content={`
-                        Exodus AI has transformed email marketing for businesses across various industries:
-
-                        **Platform Metrics**
-                        • 50+ active business clients
-                        • 100,000+ emails generated monthly
-                        • 99.2% uptime reliability
-                        • <2 minute average generation time
-
-                        **Client Results**
-                        • 45% average increase in open rates
-                        • 60% improvement in click-through rates
-                        • 35% reduction in content creation time
-                        • 80% of clients report improved engagement
-
-                        **AI Model Performance**
-                        • 92% accuracy in brand voice matching
-                        • 15% better subject line performance vs. human-written
-                        • 40% faster content creation compared to manual processes
-                        • Continuous improvement through feedback loops
-
-                        **Business Impact**
-                        • $2M+ in attributed revenue for clients
-                        • 70% client retention rate
-                        • 5-star average rating
-                        • Expanding to new market segments
-
-                        The platform continues to evolve with advanced AI capabilities and deeper integrations based on client success and market feedback.
-                    `}
-                    imageSrc="/exodus-results.png"
-                />
-
-                <Section
-                    title="Future Roadmap"
-                    content={`
-                        **Next-Generation Features**
-                        • Multi-modal AI for image and video content generation
-                        • Advanced personalization using customer journey data
-                        • Voice and tone analysis for brand alignment
-                        • Predictive analytics for campaign performance
-
-                        **Platform Expansion**
-                        • SMS and push notification support
-                        • Social media content generation
-                        • Landing page optimization
-                        • CRM integration ecosystem
-
-                        **AI Advancements**
-                        • Custom model architectures for email-specific tasks
-                        • Real-time learning from user interactions
-                        • Advanced natural language understanding
-                        • Cross-platform content consistency
-
-                        Exodus AI is positioned to become the leading AI-powered marketing automation platform, helping businesses scale their communication efforts while maintaining authentic connections with their audiences.
-                    `}
-                    imageSrc="/future-roadmap.png"
-                    reverse={true}
-                />
             </div>
         </div>
     );
