@@ -11,7 +11,16 @@ export default function Splat() {
 
             <LandingProductFeature
                 title="Splat AI"
-                description="An infinite canvas for AI conversations. Connect YouTube videos, websites, PDFs, and social media posts once — then reuse that context across as many chat threads as you want."
+                description={
+                    <>
+                        An infinite canvas for AI conversations. Connect YouTube videos, websites, PDFs, and social media posts once — then reuse that context across as many chat threads as you want.
+                        <br />
+                        <br />
+                        <a href="https://youtu.be/9R4c9RgYUh8" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline mt-2 inline-block">
+                            Watch the demo video (a bit outdated!)
+                        </a>
+                    </>
+                }
                 imageSrc="/splat/connect-context.jpg"
                 imagePerspective="left"
                 className="max-w-[75%]"
