@@ -31,7 +31,8 @@
     "tailwind-merge": "^2.5.1",
     "tailwindcss-animate": "^1.0.7",
     "three": "^0.167.1",
-    "typewriter-effect": "^2.21.0"
+    "typewriter-effect": "^2.21.0",
+    "vercel": "^50.31.3"
   },
   "devDependencies": {
     "@iconify/react": "^5.0.2",
