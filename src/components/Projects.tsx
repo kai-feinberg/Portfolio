@@ -38,7 +38,7 @@ export function Projects({ orientation = "horizontal" }) {
     return (
         <>
             <div className="flex justify-center">
-                <Badge className="text-3xl m-12 p-4 px-8 w-max">Projects</Badge>
+                <Badge className="text-2xl sm:text-3xl m-8 sm:m-12 p-3 sm:p-4 px-6 sm:px-8 w-max">Projects</Badge>
             </div>
 
             <AnimatePresence>
@@ -211,7 +211,7 @@ const cards = [
     {
         title: "TikTok Fuse (a TikTok Externship)",
         description: "A tinder interface to connect companies and creators.",
-        src: "/tt-fuse-creator.png",
+        src: "/tt-fuse-creator.jpg",
         icons: [{ component: SiFigma }],
         content: () => {
             return (
@@ -259,7 +259,7 @@ const cards = [
     {
         title: "Wildchat",
         description: "A RAG application for all things Northwestern",
-        src: "/wildchat.png",
+        src: "/wildchat.jpg",
         icons: [{ component: SiReact }, { component: SiOpenai }, { component: SiNextdotjs }, { component: SiLangchain }],
         content: () => {
             return (
@@ -291,7 +291,7 @@ const cards = [
     {
         title: "Chicken Clip",
         description: "A bag clip designed for backpacks.",
-        src: "/cc-rendered.png",
+        src: "/cc-rendered.jpg",
         content: () => {
             return (
                 <div>

@@ -12,7 +12,7 @@ export default function ExodusAI() {
             <LandingProductFeature
                 title="Exodus AI"
                 description="A daily email engine that business owners use to create content that resonates with their audience. Unlike other AI systems, Exodus comes to users with personalized suggestions based on news topics, RSS feeds, and YouTube content—enabling automated content creation that drives growth."
-                imageSrc="/exodus/generate-content.png"
+                imageSrc="/exodus/generate-content.jpg"
                 imagePerspective="left"
                 className="max-w-[75%]"
                 
@@ -28,7 +28,7 @@ export default function ExodusAI() {
 
                         Exodus is also expanding to generate short-form content as well as ads and videos with voice-over capabilities, utilizing advanced context engineering to deliver personalized results.
                     `}
-                    imageSrc="/exodus/news-ideas.png"
+                    imageSrc="/exodus/news-ideas.jpg"
                 />
 
                 
@@ -39,7 +39,7 @@ export default function ExodusAI() {
 
                         Using personalized system prompts that understand brand voice, Exodus creates context-aware content aligned with business goals and automatically adapts based on audience segments. The AI monitors trends and proactively brings relevant content ideas to users, populating content calendars with smart timing recommendations for maximum impact across platforms.
                     `}
-                    imageSrc="/exodus/generate-content.png"
+imageSrc="/exodus/generate-content.jpg"
                     reverse={true}
                 />
 
@@ -50,7 +50,7 @@ export default function ExodusAI() {
 
                         The system parses RSS feeds, analyzes email newsletters, monitors YouTube content, and scores news topics for relevance. Through advanced prompt engineering and personalized recommendation algorithms, Exodus adapts content based on audience segments and automatically optimizes for engagement while providing performance analytics and content strategy recommendations based on data.
                     `}
-                    imageSrc="/exodus/news-ideas.png"
+                    imageSrc="/exodus/news-ideas.jpg"
                 />
 
                 <MarkdownSection
@@ -60,7 +60,7 @@ export default function ExodusAI() {
 
                         The platform provides email marketing automation with personalized content, short-form social media generation, video content with AI voice-over capabilities, and advertisement copy creation. Through advanced context engineering and fine-tuned models that understand brand voice, Exodus enables businesses to maintain consistent, high-quality content across multiple channels while focusing on core business operations.
                     `}
-                    imageSrc="/exodus/swiped-content.png"
+                    imageSrc="/exodus/swiped-content.jpg"
                     reverse={true}
                 />
 

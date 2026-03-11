@@ -16,7 +16,7 @@ export default function N8nWorkshops() {
             <LandingProductFeature
                 title="n8n Workshops"
                 description="Hosted over 10 hours of live workshops teaching businesses how to automate their workflows with n8n."
-                imageSrc="/n8n.png"
+                imageSrc="/n8n.jpg"
                 imagePerspective="left"
                 className="max-w-[75%]"
                 linkIcons={

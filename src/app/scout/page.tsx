@@ -20,7 +20,7 @@ export default function scout() {
             <LandingProductFeature
                 title="Scout"
                 description="An intuitive tool to improve the experience of transfering cryptocurrency."
-                imageSrc="/scout-home.png"
+                imageSrc="/scout-home.jpg"
                 imagePerspective="left"
                 className="max-w-[75%]" // constricting the width
                 linkIcons={

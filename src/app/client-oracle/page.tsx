@@ -17,7 +17,7 @@ export default function ClientOracle() {
             <LandingProductFeature
                 title="Client Oracle"
                 description="An Agentic RAG chatbot helping freelancers find clients. Automatic sync with Google Drive indexes the latest strategies."
-                imageSrc="/client-oracle.png"
+                imageSrc="/client-oracle.jpg"
                 imagePerspective="right"
                 className="max-w-[75%]"
                 
@@ -33,7 +33,7 @@ export default function ClientOracle() {
 
                         This gap in the market inspired the creation of Client Oracle - an AI-powered assistant that transforms how freelancers approach client acquisition.
                     `}
-                    imageSrc="/client-oracle/contacts.png"
+                    imageSrc="/client-oracle/contacts.jpg"
                 />
 
                 {/* Architecture Section with Full-Width Image */}
@@ -43,7 +43,7 @@ export default function ClientOracle() {
                     {/* Full-width horizontal architecture diagram */}
                     <div className="w-full mb-8">
                         <img 
-                            src="/client-oracle/architecture.png" 
+                            src="/client-oracle/architecture.jpg" 
                             alt="Client Oracle Architecture Diagram" 
                             className="w-full rounded-xl shadow-lg"
                         />
@@ -108,7 +108,7 @@ export default function ClientOracle() {
                         • VEO3 Video Ads: Generate video advertisement concepts and scripts
 
                     `}
-                    imageSrc="/client-oracle/agent-options.png"
+                    imageSrc="/client-oracle/agent-options.jpg"
                 />
 
                 <MarkdownSection
@@ -118,7 +118,7 @@ export default function ClientOracle() {
 
                         **"Plus I think we just witnessed HISTORY... The first ever 'All-knowing AI' to get you clients. Connected to major industry content creators and players that's constantly updated every time they upload content, using their knowledge, expertise, and business to help you not just contact them but to actually create VALUE (like A-level copy or deliverables) for them in seconds. No more excuses."** - Workshop Participant
                     `}
-                    imageSrc="/client-oracle/testimonials.png"
+                    imageSrc="/client-oracle/testimonials.jpg"
                     reverse={true}
                 />
 

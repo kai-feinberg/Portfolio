@@ -34,7 +34,7 @@ export default function Home() {
   return (
     <div className='bg-dot-black/[0.2] dark:bg-dot-white/[0.2]'>
       <Nav />
-      <main className="flex min-h-screen flex-col items-center justify-between p-12">
+      <main className="flex min-h-screen flex-col items-center justify-between p-4 sm:p-6 md:p-8 lg:p-12">
         <div id="hero"><Hero/></div>
         {/* <TechStack />    */}
         <Work />

@@ -47,7 +47,7 @@ export default function trailmix() {
 
                         Fed up with the lack of tools to manage my portfolio around the clock, I decided to fix it myself…
                     `}
-                    imageSrc="/solana-pa.png"
+                    imageSrc="/solana-pa.jpg"
                 />
 
                 <Section
@@ -64,7 +64,7 @@ export default function trailmix() {
 
                         The tool I decided to use was trailing stop losses.
                     `}
-                    imageSrc="/tm-stop-loss.png"
+                    imageSrc="/tm-stop-loss.jpg"
                     reverse={true}
                 />
 
@@ -79,8 +79,8 @@ export default function trailmix() {
 
                         *now it costs less than a cent per strategy.
                     `}
-                    imageSrc="/tm-dash.png" // Replace with actual image
-                    additionalImages={["/tm-cards.png"]}
+                    imageSrc="/tm-dash.jpg" // Replace with actual image
+                    additionalImages={["/tm-cards.jpg"]}
                     reverse={true}
                 />
 
@@ -94,7 +94,7 @@ export default function trailmix() {
                         Update: TrailMix Loop (ie TrailMix V2) was a winner of the EthOnline 2024 Hackathon. I won $2k in the Chainlink "Connect the World" track. 
                         more info: https://ethglobal.com/showcase/trailmix-loop-7fkdr
                     `}
-                    imageSrc="/tm-lp.png"
+                    imageSrc="/tm-lp.jpg"
                 />
             </div>
         </div>
