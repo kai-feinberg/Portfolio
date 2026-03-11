@@ -14,13 +14,36 @@ export default function Experience() {
             <Badge className="text-2xl sm:text-3xl m-8 sm:m-12 p-3 sm:p-4 px-6 sm:px-8 w-max">Experience</Badge>
 
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:w-[95%]">
-                <div className="col-span-1 md:col-span-3 lg:col-span-5">
+                <div className="col-span-1 md:col-span-2 lg:col-span-2">
+                    <Link href="#">
+
+                            <WobbleCard containerClassName="bg-purple-700 min-h-[350px] sm:min-h-[400px] lg:min-h-[450px] xl:min-h-[300px]">
+                                <div className="max-w-sm p-4 sm:p-0">
+                                    <p className="text-base sm:text-xl font-semibold absolute top-4 right-4 sm:top-8 sm:right-8 text-white">Associate</p>
+                                    <p className="text-base sm:text-xl font-semibold absolute top-12 right-4 sm:top-16 sm:right-8 text-white">Present</p>
+                                    <h2 className="max-w-sm md:max-w-lg text-left text-balance text-xl sm:text-2xl md:text-3xl font-semibold tracking-[-0.015em] text-white mt-20 sm:mt-0">
+                                        🏢 KPMG
+                                    </h2>
+                                    <p className="mt-4 max-w-[26rem] text-left text-base/6 text-neutral-200 pb-2">
+                                        Designing and building projects for clients as a part of the app services and emerging platforms team.
+                                    </p>
+                                    <div className="flex flex-wrap gap-2 mt-8">
+                                        <Badge className="">Azure</Badge>
+                                        <Badge className="">Python</Badge>
+                                        <Badge className="">React</Badge>
+                                    </div>
+                                </div>
+                            </WobbleCard>
+                    </Link>
+                </div>
+
+                <div className="col-span-1 md:col-span-2 lg:col-span-3">
                     <Link href="#">
 
                             <WobbleCard containerClassName="bg-green-700 min-h-[400px] sm:min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]">
                                 <div className="max-w-sm p-4 sm:p-0">
                                     <p className="text-base sm:text-xl font-semibold absolute top-4 right-4 sm:top-8 sm:right-8 text-white">Head of AI</p>
-                                    <p className="text-base sm:text-xl font-semibold absolute top-12 right-4 sm:top-16 sm:right-8 text-white">2025-Present</p>
+                                    <p className="text-base sm:text-xl font-semibold absolute top-12 right-4 sm:top-16 sm:right-8 text-white">2025</p>
                                     <h2 className="max-w-sm md:max-w-lg text-left text-balance text-xl sm:text-2xl md:text-3xl font-semibold tracking-[-0.015em] text-white mt-20 sm:mt-0">
                                       📝 CopyCoders
                                     </h2>
@@ -77,8 +100,8 @@ export default function Experience() {
                     <Link href="/scout">
                         <FollowerPointerCard title="Click for case study">
 
-                            <WobbleCard containerClassName="min-h-[300px] sm:min-h-[400px] bg-indigo-800">
-                                <div className="p-4 sm:p-0">
+                            <WobbleCard containerClassName="bg-indigo-800 min-h-[400px] sm:min-h-[500px] lg:min-h-[500px] xl:min-h-[300px]">
+                                <div className="max-w-sm p-4 sm:p-0">
                                     <p className="text-base sm:text-xl font-semibold absolute top-4 right-4 sm:top-8 sm:right-8 text-white">Founder</p>
                                     <p className="text-base sm:text-xl font-semibold absolute top-12 right-4 sm:top-16 sm:right-8 text-white">2021</p>
                                     <h2 className="max-w-80 text-left text-balance text-xl sm:text-2xl md:text-3xl font-semibold tracking-[-0.015em] text-white mt-20 sm:mt-0">
