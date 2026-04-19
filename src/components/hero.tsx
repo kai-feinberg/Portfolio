@@ -40,7 +40,7 @@ export default function Hero() {
               </div>
             </div>
             <div className="w-full md:max-w-[50%] text-center md:text-left">
-              <p className="text-lg sm:text-xl md:text-2xl font-bold text-muted-foreground">Hey there! I'm Kai.</p>
+              <p className="text-lg sm:text-xl md:text-2xl font-bold text-muted-foreground">Hey there! I&apos;m Kai.</p>
               <TextGenerateEffect words="I build cool apps solving real problems" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-purple-400b leading-tight md:leading-none" />
 
               <p className="max-w-full md:max-w-[600px] mt-4 text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground leading-relaxed">

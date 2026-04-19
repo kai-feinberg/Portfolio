@@ -1,3 +1,5 @@
+"use client"
+
 import { useState, useEffect } from "react"
 import { NavigationMenu, NavigationMenuList, NavigationMenuItem } from "@/components/ui/navigation-menu"
 import { Zap, Menu, X } from "lucide-react"
@@ -38,15 +40,22 @@ export default function Nav() {
     setIsMobileMenuOpen(false);
     if (window.location.pathname !== "/") {
       window.location.href = `/?scrollTo=${id}`;
+    } else if (id === "hero") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
     } else {
       const element = document.getElementById(id);
       if (element) {
-
         element.scrollIntoView({ behavior: 'smooth' });
-
       }
     }
   };
+
+  const navItems = [
+    { label: "Home", target: "hero" },
+    { label: "Work", target: "work" },
+    { label: "Case studies", target: "case-studies" },
+    { label: "More builds", target: "projects" },
+  ];
 
   return (
     <header className="bg-background sticky top-0 z-40 w-full border-b">
@@ -60,30 +69,16 @@ export default function Nav() {
         <div className="hidden md:flex">
           <NavigationMenu>
             <NavigationMenuList>
-              <NavigationMenuItem>
-                <button
-                  onClick={() => handleScroll("hero")}
-                  className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50"
-                >
-                  Home
-                </button>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <button
-                  onClick={() => handleScroll('experience')}
-                  className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50"
-                >
-                  Experience
-                </button>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <button
-                  onClick={() => handleScroll('projects')}
-                  className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50"
-                >
-                  Projects
-                </button>
-              </NavigationMenuItem>
+              {navItems.map((item) => (
+                <NavigationMenuItem key={item.target}>
+                  <button
+                    onClick={() => handleScroll(item.target)}
+                    className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50"
+                  >
+                    {item.label}
+                  </button>
+                </NavigationMenuItem>
+              ))}
              
               <NavigationMenuItem>
                 <button
@@ -111,24 +106,15 @@ export default function Nav() {
       {isMobileMenuOpen && (
         <div className="md:hidden border-t bg-background">
           <nav className="flex flex-col p-4 space-y-2">
-            <button
-              onClick={() => handleScroll("hero")}
-              className="w-full text-left px-4 py-3 rounded-md hover:bg-accent transition-colors font-medium"
-            >
-              Home
-            </button>
-            <button
-              onClick={() => handleScroll('experience')}
-              className="w-full text-left px-4 py-3 rounded-md hover:bg-accent transition-colors font-medium"
-            >
-              Experience
-            </button>
-            <button
-              onClick={() => handleScroll('projects')}
-              className="w-full text-left px-4 py-3 rounded-md hover:bg-accent transition-colors font-medium"
-            >
-              Projects
-            </button>
+            {navItems.map((item) => (
+              <button
+                key={item.target}
+                onClick={() => handleScroll(item.target)}
+                className="w-full text-left px-4 py-3 rounded-md hover:bg-accent transition-colors font-medium"
+              >
+                {item.label}
+              </button>
+            ))}
             <button
               onClick={() => toggleTheme()}
               className="w-full text-left px-4 py-3 rounded-md hover:bg-accent transition-colors font-medium flex items-center gap-2"

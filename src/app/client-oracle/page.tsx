@@ -83,7 +83,7 @@ export default function ClientOracle() {
                         </div>
                         
                         <p className="text-lg font-semibold mt-6 text-center italic">
-                            This creates the first "All-knowing AI" for client acquisition - constantly updated with the latest strategies and connected to major industry content creators.
+                            This creates the first &quot;All-knowing AI&quot; for client acquisition - constantly updated with the latest strategies and connected to major industry content creators.
                         </p>
                     </div>
                 </div>

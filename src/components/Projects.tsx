@@ -186,14 +186,14 @@ const cards = [
             return (
                 <div>
                     <p>
-                        Frustrated by Evanston's abysmal parking signs, I made a phone app to tell you if you can park somewhere.
+                        Frustrated by Evanston&apos;s abysmal parking signs, I made a phone app to tell you if you can park somewhere.
                         Just snap a photo of the sign and get a clear Yes/No answer with a short explanation.
                         Extra useful for those with vision or cognitive impairments and for whom English is their second language.
                     </p>
                     <br />
 
                     <p>
-                        Makes use of OpenAI's gpt-4o-mini model to analyze images taken.
+                        Makes use of OpenAI&apos;s gpt-4o-mini model to analyze images taken.
                     </p>
 
                     <br />
@@ -201,7 +201,7 @@ const cards = [
 
 
                     <p>
-                        Built with Expo, React Native, and OpenAI's API.
+                        Built with Expo, React Native, and OpenAI&apos;s API.
                     </p>
                 </div>
             );
@@ -239,7 +239,7 @@ const cards = [
                     <p>
                         With more AI generated content, people have turned to Reddit as the last source of human truth. This agent speeds up your research process by identifying relevant reddit posts and extracting insights from the post and comments. 
 
-                        Won 4th place in <a href="https://www.youtube.com/watch?v=BN2ozB7LfvE" className="text-blue-500" target="_blank">Cole Medin's Live Agent Studio Hackathon</a>
+                        Won 4th place in <a href="https://www.youtube.com/watch?v=BN2ozB7LfvE" className="text-blue-500" target="_blank">Cole Medin&apos;s Live Agent Studio Hackathon</a>
                     </p>
                     <br />
                     <p>

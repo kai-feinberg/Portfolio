@@ -42,7 +42,7 @@ export default function N8nWorkshops() {
 
                         As someone passionate about automation and workflow optimization, I saw an opportunity to bridge this knowledge gap through hands-on education...
                     `}
-                    imageSrc="/n8n-automation.png"
+                    imageSrc="/n8n.jpg"
                 />
 
                 <div className="mt-16">
